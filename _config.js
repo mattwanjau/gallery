@@ -7,4 +7,3 @@ config.mongoURI = {
     test: 'mongodb+srv://wanjmatt:IlM25@mattwcluster.fsbnvef.mongodb.net/darkroom-test?retryWrites=true&w=majority',
 }
 module.exports = config;
-

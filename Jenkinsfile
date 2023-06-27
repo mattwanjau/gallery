@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         MY_LINK_RENDER = 'https://young-mountain-18198-00c30b751509.herokuapp.com'
-        MY_LINK_HEROKU = 
+        MY_LINK_HEROKU = ""
     }
   stages { 
       

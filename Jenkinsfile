@@ -51,6 +51,7 @@ pipeline {
         failure {
             //emailext attachLog: true, body: 'See attached build log report', recipientProviders: [buildUser()], subject: "Job Name - ${JOB_NAME} , Build number ${BUILD_NUMBER}"
             slackSend( message: "Gallery App deployment faield. Job Name - ${JOB_NAME} , Build number ${BUILD_NUMBER}")
+            slackSend( message: " Could not deploy to heroku. Linked to Render via Github .Render link: ${MY_LINK_RENDER}")
         }
     }
   }

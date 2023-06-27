@@ -2,7 +2,7 @@ pipeline {
     
   agent any
   tools{
-      gradle 'Gradle'
+      nodejs "20.3.1"
   }
 
     environment {
@@ -19,18 +19,17 @@ pipeline {
             git 'https://github.com/mattwanjau/gallery'
           }
         }
-        stage('Build project'){
+        stage('Install'){
             
             steps{
                 
-                sh 'gradle build'
+                sh 'npm install'
             }
         }
         stage('Tests'){
             
             steps{
-                
-                sh 'gradle Test'
+                sh 'npm run test'
             }
         }
         
